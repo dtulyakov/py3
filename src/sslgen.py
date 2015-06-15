@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # coding: utf-8
-
+'''
+Генератор сабдоменов при регистрации халявных ссл сертификатов
+name = ' '.join(name.split()) создаёт список или я чёто не так делаю ...
+'''
 d_name = str(input("Имя домена: "))
 name = d_name.replace(' ','')
 if name == "":
@@ -37,6 +40,8 @@ for file in "dev.", \
     "t.", \
     "gf.", \
     "at.", \
-    "spring.":
+    "spring." \
+    "blog.", \
+    "wiki.":
     print(file+name.lower())
 #EOF
