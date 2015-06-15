@@ -12,7 +12,9 @@ if name == "":
 else:
     pass
 
-for file in "dev.", \
+for file in "", \
+    "mng.", \
+    "dev.", \
     "alpha.", \
     "release.", \
     "beta.", \
