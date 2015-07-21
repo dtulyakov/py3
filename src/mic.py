@@ -2,10 +2,14 @@
 # coding: utf-8
 '''
 Можно было шандарахнуть и так но это не наш метод
-os.system(record + ("/home/ttys/frommic/" + date_iso.strftime("%Y/%m/%d/")) + (date_iso.strftime("%Y%m%d-%H") + ".mp3"))
-
-'''
 import os
+os.system(record + ("/home/ttys/frommic/" + date_iso.strftime("%Y/%m/%d/")) + (date_iso.strftime("%Y%m%d-%H") + ".mp3"))
+os.system(record + path + date_path + file_mp3)
+
+Почему не system?
+Потому, что считается более правильным использовать subprocess
+'''
+import subprocess
 from datetime import datetime
 from distutils.dir_util import mkpath
 
@@ -18,5 +22,5 @@ record = "arecord --buffer-time=5000000 -D plughw:0,0 -f S16_LE --use-strftime -
 file_mp3 = date_file + ".mp3"
 
 mkpath(path)
-os.system(record + path + date_path + file_mp3)
+subprocess.call(record + path + date_path + file_mp3, shell=True)
 #EOF
