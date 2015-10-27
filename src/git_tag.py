@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-from datetime import datetime, date, time
+from datetime import datetime
+# from datetime import datetime, date, time
 import subprocess
 
 date_iso = datetime.today()
