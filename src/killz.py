@@ -10,21 +10,12 @@ os.system(record + path + date_path + file_mp3)
 Потому, что считается более правильным использовать subprocess
 '''
 import subprocess
-from datetime import datetime
-from distutils.dir_util import mkpath
 
-date_iso = datetime.today()
-date_path = (date_iso.strftime("%Y/%m/%d/"))
-date_file = (date_iso.strftime("%Y%m%d-%H"))
-
-path = "/home/ttys/spy/"
-record = "arecord --buffer-time=5000000 -D plughw:0,0 -f S16_LE --use-strftime - | lame - >"
-file_mp3 = date_file + ".mp3"
-mkpath(path + date_path)
+z = subprocess.check_output(["w"])
 
 
 def main():
-    subprocess.call(record + path + date_path + file_mp3, shell=True)
-
+    # subprocess.call(record + path + date_path + file_mp3, shell=True)
+    print(z)
 if __name__ == '__main__':
     main()

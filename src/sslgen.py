@@ -6,7 +6,7 @@
 name = ' '.join(name.split()) создаёт список или я чёто не так делаю ...
 '''
 d_name = str(input("Имя домена: "))
-name = d_name.replace(' ','')
+name = d_name.replace(' ', '')
 if name == "":
     name = str("example.org")
 else:
@@ -43,8 +43,8 @@ for file in "", \
     "t.", \
     "gf.", \
     "at.", \
-    "spring." \
+    "spring.", \
     "blog.", \
     "wiki.":
     print(file+name.lower())
-#EOF
+# EOF
