@@ -14,4 +14,3 @@ list_files = glob.glob(path + '*.wav')
 for files in list_files:
     output = subprocess.check_output(["lame", files])
     output = subprocess.check_output(["rm", files])
-#EOF

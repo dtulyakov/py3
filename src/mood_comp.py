@@ -4,10 +4,10 @@
 import random
 
 print("\nхелло бля")
-mood = random.randint(0,3)
+mood = random.randint(0, 3)
 if mood == 1:
     print(""" 11111 """)
-    
+
 elif mood == 2:
     print(""" 2222 """)
 
